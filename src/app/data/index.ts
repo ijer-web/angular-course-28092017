@@ -43,7 +43,7 @@ const data: Product[] = [
     '_id': '58e1f809a8fd877d977d9e22',
     'price': '1440.52',
     'picture': 'http://placehold.it/320x320',
-    'title': 'DRAGBOT'
+    'title': 'DRAGBBOT'
   },
   {
     '_id': '58e1f809473528b3533131d0',
