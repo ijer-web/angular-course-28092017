@@ -3,9 +3,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.sass']
 })
-
 export class SearchComponent {
 
   @Input()
@@ -17,5 +16,4 @@ export class SearchComponent {
   public search(text: string): void {
     this.mySearch.emit(text);
   }
-
 }

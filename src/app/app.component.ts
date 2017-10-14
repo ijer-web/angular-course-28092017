@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { products$ } from './data';
+import { products$ } from './data';
 import { Observable } from 'rxjs/Observable';
-import { ProductsService } from './common/services/products.service';
-import { ModalService } from './common/services/modal.service';
-import { FullCardComponent } from './card/full-card/full-card.component';
+
+// import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   public title: string = 'Angular course';
@@ -21,18 +20,10 @@ export class AppComponent implements OnInit {
   public desc: string = 'its logo';
   public placeholder: string = 'search term';
 
-  public products$: Observable<Product[]>;
+  public products$: Observable<Product[]> = products$;
 
-  public constructor(
-    private _productsService: ProductsService,
-    private _modalService: ModalService,
-  ) {
-
-  }
 
   public ngOnInit(): void {
-    this.products$ = this._productsService.getProducts();
-
     // this.subscription = products$.subscribe((products: Product[]) => {
     //   this.products$ = products;
     // });
@@ -42,13 +33,5 @@ export class AppComponent implements OnInit {
   public clickOnImage(): void {
 
   }
-
-  public openFullCard(product: Product): void {
-    this._modalService.open({
-      component: FullCardComponent,
-      context: {
-        product
-      }
-    });
-  }
 }
+

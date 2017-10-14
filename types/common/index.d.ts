@@ -1,6 +1,5 @@
 type Env = {
-  production: boolean,
-  baseUrl: string
+  production: boolean
 };
 
 type Product = {
@@ -8,9 +7,4 @@ type Product = {
   'price': string,
   'picture': string,
   'title': string
-};
-
-type CartItem = {
-  product: Product;
-  action: 'add' | 'remove';
 };
